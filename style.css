@@ -1,20 +1,546 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
-    text-align:center;
-    padding-top:80px;
+font-family:'Poppins',sans-serif;
+background:#041321;
+color:#fff;
+line-height:1.7;
+overflow-x:hidden;
 }
 
-h1{
-    color:#0066cc;
+img{
+max-width:100%;
+display:block;
 }
 
-button{
-    background:#0066cc;
-    color:white;
-    border:none;
-    padding:12px 24px;
-    border-radius:8px;
-    cursor:pointer;
+a{
+text-decoration:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.8)
+),
+url("../images/hero-bg.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+position:relative;
+}
+
+.summary-hero{
+height:70vh;
+background:
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.8)
+),
+url("../images/ai-bg.jpg");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+padding:20px;
+}
+
+.hero-content h1{
+font-size:90px;
+font-weight:800;
+letter-spacing:5px;
+margin-bottom:10px;
+}
+
+.hero-content h2{
+font-size:30px;
+color:#4fd4ff;
+margin-bottom:15px;
+}
+
+.hero-content p{
+font-size:22px;
+font-style:italic;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+
+padding:15px 30px;
+
+border-radius:50px;
+
+background:#00bfff;
+
+color:#fff;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+
+box-shadow:
+0 0 20px #00bfff;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+padding:90px 10%;
+}
+
+.center{
+text-align:center;
+}
+
+.section-title{
+font-size:40px;
+text-align:center;
+margin-bottom:40px;
+color:#4fd4ff;
+font-weight:700;
+}
+
+.journey-subtitle{
+text-align:center;
+margin-bottom:50px;
+font-size:18px;
+opacity:.9;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile-card{
+
+background:
+rgba(7,26,43,.9);
+
+border:
+1px solid rgba(0,191,255,.3);
+
+border-radius:25px;
+
+padding:40px;
+
+display:flex;
+align-items:center;
+gap:40px;
+
+box-shadow:
+0 0 25px rgba(0,191,255,.15);
+}
+
+.avatar img{
+
+width:250px;
+height:250px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+border:5px solid #00bfff;
+
+box-shadow:
+0 0 30px #00bfff;
+}
+
+.profile-info h2{
+
+font-size:38px;
+
+margin-bottom:20px;
+
+color:#4fd4ff;
+}
+
+.profile-info p{
+
+margin-bottom:10px;
+
+font-size:18px;
+}
+
+.quote{
+
+margin-top:20px;
+
+font-style:italic;
+
+color:#89dfff;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+background:
+rgba(7,26,43,.9);
+
+border:
+1px solid rgba(0,191,255,.3);
+
+border-radius:25px;
+
+padding:35px;
+
+box-shadow:
+0 0 20px rgba(0,191,255,.15);
+}
+
+.card ul{
+padding-left:25px;
+}
+
+.card li{
+margin-bottom:15px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills{
+
+display:flex;
+flex-wrap:wrap;
+
+gap:15px;
+
+justify-content:center;
+}
+
+.skills span{
+
+padding:12px 22px;
+
+background:#07233a;
+
+border:
+1px solid #00bfff;
+
+border-radius:30px;
+
+transition:.3s;
+}
+
+.skills span:hover{
+
+background:#00bfff;
+
+transform:translateY(-3px);
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+}
+
+.project-card{
+
+background:
+rgba(7,26,43,.95);
+
+border:
+1px solid rgba(0,191,255,.25);
+
+border-radius:25px;
+
+padding:30px;
+
+color:white;
+
+transition:.4s;
+}
+
+.project-card:hover{
+
+transform:
+translateY(-10px);
+
+box-shadow:
+0 0 30px rgba(0,191,255,.5);
+}
+
+.number{
+
+font-size:55px;
+
+font-weight:700;
+
+color:#00bfff;
+}
+
+.project-card h3{
+
+margin:15px 0;
+
+font-size:24px;
+}
+
+.project-card p{
+
+opacity:.9;
+}
+
+/* =========================
+   SUMMARY BUTTON
+========================= */
+
+.summary-btn{
+
+display:inline-block;
+
+padding:18px 35px;
+
+border-radius:50px;
+
+background:#00bfff;
+
+color:white;
+
+font-weight:700;
+
+transition:.3s;
+}
+
+.summary-btn:hover{
+
+transform:
+translateY(-5px);
+
+box-shadow:
+0 0 20px #00bfff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+border-top:
+1px solid rgba(0,191,255,.2);
+
+margin-top:50px;
+}
+
+footer p{
+margin:10px 0;
+}
+
+.social{
+
+margin-bottom:20px;
+}
+
+.social a{
+
+color:#00bfff;
+
+font-size:28px;
+
+margin:0 15px;
+
+transition:.3s;
+}
+
+.social a:hover{
+
+color:white;
+}
+
+/* =========================
+   SCROLL BAR
+========================= */
+
+::-webkit-scrollbar{
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#02101d;
+}
+
+::-webkit-scrollbar-thumb{
+background:#00bfff;
+border-radius:10px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.hero-content{
+animation:fadeIn 1.5s ease;
+}
+
+.profile-card,
+.card,
+.project-card{
+
+animation:
+slideUp .8s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes slideUp{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.hero-content h1{
+font-size:65px;
+}
+
+.profile-card{
+flex-direction:column;
+text-align:center;
+}
+}
+
+@media(max-width:768px){
+
+.section{
+padding:70px 8%;
+}
+
+.hero-content h1{
+font-size:50px;
+}
+
+.hero-content h2{
+font-size:22px;
+}
+
+.hero-content p{
+font-size:18px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+.avatar img{
+width:200px;
+height:200px;
+}
+
+.profile-info h2{
+font-size:28px;
+}
+
+.project-grid{
+grid-template-columns:1fr;
+}
+}
+
+@media(max-width:480px){
+
+.hero-content h1{
+font-size:40px;
+}
+
+.hero-content h2{
+font-size:18px;
+}
+
+.btn,
+.summary-btn{
+width:100%;
+}
+
+.profile-info p{
+font-size:16px;
+}
 }
